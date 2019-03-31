@@ -16,19 +16,23 @@ public class Boss
     public void magic()
     {
 
-        
+
         if (mp < 5) { Debug.Log("MPが足りないため魔法が使えない。"); }
-        else { Debug.Log("魔法攻撃をした。残りMPは" + mp + "。");
+        else
+        {
+            Debug.Log("魔法攻撃をした。残りMPは" + mp + "。");
             mp -= 5;
         }
     }
 }
 
-public class Test : MonoBehaviour {
+public class Test : MonoBehaviour
+{
 
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
 
 
 
@@ -37,11 +41,11 @@ public class Test : MonoBehaviour {
         //課題
 
         //要素の個数が5の、int型の配列arrayを宣言して好きな値で初期化
-        int[] Array = { 0, 1, 2, 3, 4 };
+        int[] Array = { 0, 1, 2, 3, 4, 5 };
 
         //for文を使い、配列の各要素の値を順番に表示
 
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < Array.Length; i++)
         {
             Debug.Log(Array[i]);
         }
@@ -50,10 +54,10 @@ public class Test : MonoBehaviour {
 
         //for文を使い、配列の各要素の値を逆順に表示
 
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < Array.Length; i++)
         {
 
-            Debug.Log(Array[4 - i]);
+            Debug.Log(Array.Length - 1 - Array[i]);
         }
 
 
@@ -76,9 +80,10 @@ public class Test : MonoBehaviour {
         //発展課題は以上。
 
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 }
